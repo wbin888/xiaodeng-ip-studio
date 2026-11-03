@@ -74,4 +74,4 @@ Recurring IP character required:
 
 ## 设定稿
 
-`assets/xiaofang-sheet.png`(源文件 `assets/xiaofang-sheet.svg`):标准站姿 / 吞 / 封·分装 / 塞爆。生图时可作参考图(`--ref`)锁形象。
+`assets/xiaofang-sheet.png`(源文件 `assets/xiaofang-sheet.svg`):标准站姿 / 吞 / 封·分装 / 塞爆。生图时可作参考图(`--reference`)锁形象。
