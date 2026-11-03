@@ -42,7 +42,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<you>/xiaodeng-ip-studio ~/.claude/skills/xiaodeng-ip-studio
+git clone https://github.com/wbin888/xiaodeng-ip-studio ~/.claude/skills/xiaodeng-ip-studio
 cd ~/.claude/skills/xiaodeng-ip-studio && bash install.sh
 ```
 
