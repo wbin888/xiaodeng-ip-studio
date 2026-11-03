@@ -33,10 +33,39 @@
 | **小格** | 白底淡蓝方格纸,顶边撕口,单圆眼 | 记 / 贴 / 撕 / 折 / 叠 / 对齐 | 笔记、清单、待办 | [sheet](characters/xiaoge/sheet.png) · [spec](characters/xiaoge/character.md) |
 | **小方** | 白色正面纸盒,单圆眼,蓝点天线 | 吞 / 吐 / 封 / 分装 / 塞爆 / 叠 | 收集、归档、分发 | [sheet](characters/xiaofang/sheet.png) · [spec](characters/xiaofang/character.md) |
 
-另外可外接 [小互 IP Studio](https://github.com/xiaohuailabs/xiaohu-ip-studio) 的 **31 个角色**(需另装,© 小互):
+### 接入小互 IP Studio 的 31 个角色
+
+[小互 IP Studio](https://github.com/xiaohuailabs/xiaohu-ip-studio) 的 31 个角色可以**一键接入**。角色图从上游拉到本地 `vendor/`,本仓库不分发(© 小互):
+
+```bash
+python3 scripts/studio.py cast install      # 或:bash install.sh --with-xiaohu
+python3 scripts/studio.py cast list         # 36 个角色,按来源分组
+python3 scripts/studio.py cast show 牛马     # 角色包 + 参考图路径
+```
 
 - 角色(15):淡淡、电量、丁零、方方、疯崽、木鱼、牛马、泡泡、破防君、缩缩、贴贴、替替、团团、小互、续命
 - 食物 / 符号(16):蕉绿、韭菜、续命咖啡、苦瓜脸、暴躁辣椒、蘑菇、柠檬精、茄子、三角、闪电、蒜鸟、叹号人、问号人、五角星、咸鱼、洋葱
+
+接入后统一用本技能的白底黑线画风,每个角色只保留一点淡主色。36 个角色的肢体、招牌色、擅长主题和推荐组合见 [`references/cast-roster.md`](references/cast-roster.md)。
+
+## 多 IP 同框:一篇文章用 2-3 个角色
+
+![多 IP 同框示例](assets/ensemble-demo.png)
+
+文章本身有多个角色或视角时(人 vs AI、旧 vs 新、多环节流水线),可以定一张**演员表**:1 个主角 + 1-2 个搭档。每个角色代表一个全篇不变的意思,比如小格 = 记录、小针 = 连线、小灯 = 洞见。
+
+- 单张默认最多 2 个 IP;3 个只出现在交接图、四格和总览图里。
+- 每个 IP 都要干活,不准有人站旁边围观。
+- 招牌色不撞,外形不合体。
+- 互动模式从五种里选:交接、对照、协作、冲突、因果。
+
+对 agent 说「这篇用小格 + 小针 + 小灯」即可。生图时用 `--cast` 按顺序附参考图:
+
+```bash
+python3 scripts/generate.py --prompt-file p.md --cast 小格 小针 小灯 --out 03.png
+```
+
+完整示例(一篇示例文案、拆解方案和 prompt)见 [`examples/ensemble-demo.md`](examples/ensemble-demo.md),规则见 [`references/ensemble.md`](references/ensemble.md)。
 
 ## 两种用法
 
@@ -53,7 +82,7 @@
 | 防漏配 | 凭判断挑锚点 | 逐节枚举 | 逐节枚举 + 锚点清单 |
 | 防画错 | — | 深读 Q4 + 隐喻对照 | 保留 |
 | 图类型 | 8 种结构 | 三轨 + 海报 | 10 种结构 × 三轨 + 可选海报 |
-| 演员 | 小黑 | 31 个角色(需选) | 默认原创 IP 小灯,可选换角 |
+| 演员 | 小黑 | 31 个角色(需选) | 默认原创 IP 小灯,36 个角色可换,一篇可用 2-3 个 IP |
 | 生成前确认 | 不停 | 必停选角选风格 | 分析就停,生成就不停 |
 | 比例 | 16:9 | 按内容形状,封顶 4:3 | 按渠道:桌面 16:9,移动端按形状 |
 | 生图 | 内置 `image_gen` | 自带脚本 | 内置工具优先,脚本兜底,另加比例校验与 `--dry-run` |
@@ -62,7 +91,7 @@
 
 ```bash
 git clone https://github.com/wbin888/xiaodeng-ip-studio ~/.claude/skills/xiaodeng-ip-studio
-cd ~/.claude/skills/xiaodeng-ip-studio && bash install.sh
+cd ~/.claude/skills/xiaodeng-ip-studio && bash install.sh                 # 加 --with-xiaohu 可同时接入 31 个小互角色
 ```
 
 只做分析、或 agent 自带生图工具时,不需要配置 API key。
@@ -80,20 +109,25 @@ references/
   tracks.md                  情绪 / 解释 / 四格 / 海报
   prompt-template.md         各轨 prompt 骨架
   qa-checklist.md            自检与迭代
-  cast-swap.md               换角与角色包安全
+  cast-roster.md             36 个角色速查 + 推荐组合
+  ensemble.md                多 IP 同框规则
+  cast-swap.md               换角操作与角色包安全
   backends.md                生图后端
 characters/<id>/             内置换角:character.md + sheet.png(小墨 / 小针 / 小格 / 小方)
-assets/                      小灯设定稿、角色库总览图
+assets/                      小灯设定稿、角色库总览图、多 IP 示例图
+examples/ensemble-demo.md    3 个 IP 的完整示例(文案 + 方案 + prompt)
+vendor/                      cast install 拉取的小互角色库(不入库)
 scripts/
   generate.py                生图(OpenAI 兼容端点,纯标准库)
-  studio.py                  init / doctor
+  studio.py                  init / doctor / cast list·show·install
+  castlib.py                 统一角色注册表(内置 + 小互)
 agents/openai.yaml           Codex agent 元数据
 ```
 
 ## 换角
 
-默认小灯。想换内置角色,直接说“这篇用小墨 / 小针 / 小格 / 小方出演”。想让小互角色库里的角色出演,先安装 [xiaohu-ip-studio](https://github.com/xiaohuailabs/xiaohu-ip-studio)(放在同级目录或设置 `XIAOHU_STUDIO_DIR`),再说“这篇用牛马出演”。详见 `references/cast-swap.md`。
+默认小灯。想换内置角色,直接说“这篇用小墨 / 小针 / 小格 / 小方出演”。想让小互角色出演,先 `python3 scripts/studio.py cast install`,再说“这篇用牛马出演”。想同时用多个角色,说“这篇用小灯 + 替替”。详见 `references/cast-swap.md` 和 `references/ensemble.md`。
 
 ## 许可与署名
 
-MIT。小灯、小墨、小针、小格、小方均为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(本仓库不含角色图)。详见 `NOTICE.md`。
+MIT。小灯、小墨、小针、小格、小方均为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(本仓库不含角色图;`cast install` 从上游拉取,遵循其 MIT + NOTICE)。详见 `NOTICE.md`。
