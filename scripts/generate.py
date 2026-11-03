@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""xiaohei-ip-studio 生图脚本(改编自 xiaohu-ip-studio,MIT)
+"""xiaofang-ip-studio 生图脚本(改编自 xiaohu-ip-studio,MIT)
 
 走 OpenAI 兼容图像端点,自带两种后端(config.yaml 的 backend 字段,缺省自动判断):
   - apimart-task : 异步任务模式(提交 /images/generations → 拿 task_id → 轮询 /tasks/{id} → 下载),
                    适配 apimart 等网关的 GPT-image-2;图生图用 image_urls(base64 data URI)。
   - openai-sync  : 标准同步(/images/generations 直返 b64/url;图生图走 /images/edits multipart)。
 
-读 ~/.config/xiaohei-ip-studio/config.yaml(用 studio.py init 写入,不内置任何密钥)。
+读 ~/.config/xiaofang-ip-studio/config.yaml(用 studio.py init 写入,不内置任何密钥)。
 
   文生图:       python3 generate.py --prompt-file p.md --out out.png
   图生图(锁角色): python3 generate.py --prompt-file p.md --reference <锚点图> --out out.png
@@ -17,7 +17,7 @@ prompt 文件 = YAML 头(aspect_ratio 必填) + 正文 prompt。纯标准库,无
 from __future__ import annotations
 import argparse, base64, json, os, pathlib, sys, time, urllib.error, urllib.request, uuid
 
-CONFIG_PATH = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaohei-ip-studio" / "config.yaml"
+CONFIG_PATH = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaofang-ip-studio" / "config.yaml"
 
 TERMINAL_OK = ("completed", "success", "succeeded", "done", "finished")
 TERMINAL_FAIL = ("failed", "error", "cancelled", "canceled", "timeout")
