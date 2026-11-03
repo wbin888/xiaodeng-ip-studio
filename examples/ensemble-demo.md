@@ -22,13 +22,13 @@
 >
 > 真正有用的笔记库,不看你存了多少条,而看条和条之间**连了多少根线**。
 >
-> **三、记下来 → 连起来 → 才会亮**
+> **三、记下来 → 连起来 → 才会开花**
 >
 > 我现在的做法只有三步:
 >
 > 1. **记下来**:只记自己的一句话,不抄原文。
 > 2. **连起来**:每记一条新的,就去找一条旧的,写下“它们为什么有关”。
-> 3. **才会亮**:写作时不再搜关键词,而是顺着连线走,走到某个交叉口,观点自己就冒出来了。
+> 3. **才会开花**:写作时不再搜关键词,而是顺着连线走,走到某个交叉口,观点自己就冒出来了。
 >
 > **四、一个月后**
 >
@@ -45,16 +45,16 @@
 ```markdown
 ## 配图拆解方案:记了 3000 条笔记,为什么还是想不出东西
 
-**全文主张**:笔记的价值不在条数,在连线;记下来、连起来,才会亮。
+**全文主张**:笔记的价值不在条数,在连线;记下来、连起来,才会开花。
 **建议张数**:4 张(情绪 1 / 解释 2 / 四格 1)
-**一篇一世界**:不启用(三个角色本身就是「纸 / 回形针 / 灯」这一套文具世界)
+**一篇一世界**:不启用(三个角色本身就是「纸 / 回形针 / 书桌上的猫」这一套书桌世界)
 **演员表**:多 IP(文章本身就是三段流水线,每段性质不同 → 过 ensemble 判定)
 
 | 角色 | 身份 | 代表(全篇不变) | 出场 |
 |---|---|---|---|
 | 小格 | 主角 | 一条笔记 / 记录 | 01 02 03 04 |
 | 小针 | 搭档 | 笔记之间的连线 | 02 03 04 |
-| 小灯 | 搭档 | 洞见 / 写作时冒出的观点 | 03 04 |
+| 小煤球 | 搭档 | 洞见 / 写作时冒出的观点 | 03 04 |
 | 蒜鸟(小互) | 龙套 | 「算了」 | 01 |
 
 ### 逐节判定
@@ -62,7 +62,7 @@
 |---|---|---|---|
 | 一、收藏夹里的坟场 | 情绪 | 配·情绪 | 开头钩子:「记了很多却用不上」要让读者代入 |
 | 二、笔记不是存款,是零件 | 对比 | 配·解释 | 存 vs 连,是全文最反直觉的判断 |
-| 三、记下来 → 连起来 → 才会亮 | 流程 | 配·解释 | 全文 hero,三步要数着记 |
+| 三、记下来 → 连起来 → 才会开花 | 流程 | 配·解释 | 全文 hero,三步要数着记 |
 | 四、一个月后 | 时间线 | 配·四格 | 有起承转合 |
 | 五、给你的建议 | 行动号召 | 不配 | 一句话,文字已经足够 |
 
@@ -88,15 +88,15 @@
 - **中文标注**:存了 3000 条 / 连了 3 根线 / 零件 / 网
 - **比例 · IP 占比**:16:9 · 合计 ~25%
 
-#### 03 · 记下来 → 连起来 → 才会亮(hero)
+#### 03 · 记下来 → 连起来 → 才会开花(hero)
 - **位置**:第三节三步列表后
-- **核心意思**:一条笔记不会亮,连上了才会亮
+- **核心意思**:一条笔记不会开花,连上了才会开花
 - **图类型 / 结构**:解释·流程 / Workflow
-- **出演**:小格(记满对勾,站在起点)→ 小针(作为一串回形针里唯一活着的那一环,把旧笔记和新问题钩在一起)→ 小灯(手里握着链条末端的插头,亮了)· 交接
-- **隐喻对照**:方格纸 → 一条笔记;回形针链 → 笔记间的连线;插头接通 → 写作时顺着连线走到观点
-- **必现内容**:三步,顺序是 记下来 → 连起来 → 才会亮;「旧笔记 × 新问题」
-- **建议元素**:回形针链、插头
-- **中文标注**:① 记下来 / ② 连起来 / ③ 才会亮 / 旧笔记 × 新问题 / 洞见
+- **出演**:小格(记满对勾,站在起点)→ 小针(作为一串回形针里唯一活着的那一环,把旧笔记和新问题钩在一起)→ 小煤球(扑住链条末端,头顶小芽开出一朵小黄花,笑眯了眼)· 交接
+- **隐喻对照**:方格纸 → 一条笔记;回形针链 → 笔记间的连线;小煤球扑住链尾、小芽开花 → 写作时顺着连线走到观点
+- **必现内容**:三步,顺序是 记下来 → 连起来 → 才会开花;「旧笔记 × 新问题」
+- **建议元素**:回形针链、小芽上的小黄花
+- **中文标注**:① 记下来 / ② 连起来 / ③ 才会开花 / 旧笔记 × 新问题 / 洞见
 - **比例 · IP 占比**:16:9 · 三个合计 ~30%(三人同框:交接图,允许)
 
 #### 04 · 一个月后
@@ -104,10 +104,10 @@
 - **核心意思**:连线是慢慢长出来的,长到某天,不用搜索了
 - **图类型 / 结构**:四格
 - **出演**:每格最多 2 个 IP,主线由小格贯穿
-  - 起:小格皱着眉,对着一张旧纸,不知道该连谁。小灯灭着。
+  - 起:小格皱着眉,对着一张旧纸,不知道该连谁。小煤球蹲在一旁,头顶小芽蔫着。
   - 承:小针一端钩住「三年前的读书笔记」,另一端钩住「昨天的会议吐槽」,两张纸都很意外。
   - 转:回形针链越来越长,小格站在链条中间的一个交叉口上。
-  - 合:小灯合上了搜索框的盖子,它自己亮着。
+  - 合:小煤球一爪把搜索框推下桌,头顶小芽开了花。
 - **中文标注**:第一周 / 第二周 / 第三周 / 第四周
 - **比例 · IP 占比**:1:1 · 每格小
 
@@ -123,12 +123,12 @@
 |---|---|
 | 主角小格出场 | 4 / 4 |
 | 搭档小针出场 | 3 次 |
-| 搭档小灯出场 | 2 次 |
+| 搭档小煤球出场 | 2 次 |
 | 三人同框 | 只在 03(交接图) |
 | 小互龙套 | 只在 01 出场,不进主线 |
-| 招牌色 | 淡蓝方格、青绿、暖黄、蒜白淡紫,互不相撞 |
+| 招牌色 | 淡蓝方格、青绿、煤球黑 + 奶白 + 嫩芽绿、蒜白淡紫,互不相撞 |
 
-> 示例里主角是小格,不是小灯:选角跟着文章走,默认主角也可以让位。
+> 示例里主角是小格,不是小煤球:选角跟着文章走,默认主角也可以让位。
 
 ---
 
@@ -147,29 +147,29 @@ aspect_ratio: "16:9"
 Generate one standalone 16:9 horizontal Chinese article explanatory sketch (FLOW), hand-drawn, NOT a slide.
 
 Visual DNA:
-Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no cute mascot poster, no children's illustration, no realistic UI.
+Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten Chinese annotations. Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no childish sticker-style mascot poster, no children's illustration, no realistic UI.
 
 Recurring IP characters required (3 different characters — keep them visually distinct, NEVER merge their features or swap their parts):
 
 Character 1 — 小格 (Xiaoge): a single square sheet of GRID PAPER torn from a spiral notebook. White paper, thin black hand-drawn outline, LIGHT BLUE grid lines; jagged torn top edge; bottom-right corner folded inward. NOT a yellow sticky note. ONE large round eye (white with a black pupil), no mouth. Two thin stick legs, thin line arms when needed.
 Character 2 — 小针 (Xiaozhen): a single TEAL-GREEN double-loop paperclip standing upright, one continuous teal line, no fill, no shine. Two small black dot eyes inside the top of the outer loop, no mouth. Two short thin black legs; NO arms.
-Character 3 — 小灯 (Xiaodeng): a thin stick figure whose head is a round LIGHT BULB with a small white screw base. NO eyes, NO mouth — its only face is the filament. Lit = filament stands up as a sharp "M" zigzag, translucent warm yellow inside the bulb, a few short yellow rays.
+Character 3 — 小煤球 (Xiaomeiqiu, "little coal ball"): a small, chubby, round BLACK CAT blob, slightly wider than tall, almost no neck, two rounded triangle cat ears (pink inside). Thick rounded dark outline, soft charcoal black fill, a cream-white oval belly patch. On top of the head: one short green stem with TWO small bright-green sprout leaves. Face: yellow-green cat eyes, a tiny pink triangle nose, a light "ω" mouth, two pink blush ovals, two whiskers on each side. Two small round paw-hands and two little half-round feet. Figured it out = curved happy closed eyes, open smile, and a tiny five-petal YELLOW FLOWER blooming on the sprout. NOT a faceless black blob with white dot eyes. Cute but earnest; NOT a sticker, NOT 3D.
 
 Who does what in this image (handoff):
 - 小格: stands at the far left, its grid filled with three small red check marks, with two plain grid sheets scattered behind it.
 - 小针: in the middle, the ONLY living link in a chain of plain teal paperclips; the chain arcs from 小格 on the left to the right, hooking "old notes" to "new question".
-- 小灯: at the far right, holding the plug at the end of the chain in one hand; it is LIT.
+- 小煤球: at the far right, pouncing on the last link of the chain with both paws; its eyes are happy closed curves and a small yellow flower has bloomed on its sprout.
 Every character performs a different part of the core action; nobody stands aside watching. All characters are small (together about 30% of the frame) and drawn with the SAME black pen as the rest of the scene.
 
-Core idea: one note never lights up; connected notes do.
-Flow: left → right; one orange arc runs along the paperclip chain from 小格 to 小灯.
-Chinese handwritten labels (exact text): ① 记下来 / ② 连起来 / ③ 才会亮 / 旧笔记 × 新问题 / 洞见
+Core idea: one note never blooms; connected notes do.
+Flow: left → right; one orange arc runs along the paperclip chain from 小格 to 小煤球.
+Chinese handwritten labels (exact text): ① 记下来 / ② 连起来 / ③ 才会开花 / 旧笔记 × 新问题 / 洞见
 
 Color use:
-Each character keeps ONLY its own signature color: 小格 = light blue grid lines; 小针 = teal-green wire; 小灯 = warm yellow inside the bulb only. No character borrows another's color. Orange for the main flow arc and step labels. Red only for the check marks and "洞见". Blue only for the small note "旧笔记 × 新问题". Color names are rendering guidance only — do NOT display them as visible text.
+Each character keeps ONLY its own signature color: 小格 = light blue grid lines; 小针 = teal-green wire; 小煤球 = charcoal black body, cream belly, bright-green sprout (plus the small yellow flower). No character borrows another's color. Orange for the main flow arc and step labels. Red only for the check marks and "洞见". Blue only for the small note "旧笔记 × 新问题". Color names are rendering guidance only — do NOT display them as visible text.
 
 Body integrity:
-小格 is exactly one grid sheet with one eye and two legs, never yellow. 小针 is exactly one teal paperclip with two dot eyes and two legs, no arms; the other paperclips in the chain are plain (no eyes, no legs). 小灯 has exactly one bulb head, one screw base, one line body, two arms, two legs, no eyes or mouth. Background lines stop at each character's outline.
+小格 is exactly one grid sheet with one eye and two legs, never yellow. 小针 is exactly one teal paperclip with two dot eyes and two legs, no arms; the other paperclips in the chain are plain (no eyes, no legs). 小煤球 has exactly one round cat body, two ears, one sprout with two leaves, two eyes, one nose, one mouth, two blush marks, four whiskers, two paw-hands, two feet and one cream belly. Background lines stop at each character's outline.
 
 Constraints:
 Exactly three steps, in this order. Keep ≥35% blank white space. No title in the top-left corner. Do not write the structure type. Strange but clean, not childish.
@@ -178,13 +178,13 @@ Exactly three steps, in this order. Keep ≥35% blank white space. No title in t
 生图:
 
 ```bash
-python3 scripts/generate.py --prompt-file prompts/03.md --cast 小格 小针 小灯 --out assets/notes-illustrations/03-connect-to-light.png
+python3 scripts/generate.py --prompt-file prompts/03.md --cast 小格 小针 小煤球 --out assets/notes-illustrations/03-connect-to-bloom.png
 ```
 
 `--cast` 会按顺序附上三张设定稿,并在 prompt 末尾追加:
 
 ```text
-Reference images: image 1 is the character sheet of 小格 (Xiaoge) — copy its look exactly; image 2 … 小针 …; image 3 … 小灯 …. Keep every character visually distinct; never merge their features.
+Reference images: image 1 is the character sheet of 小格 (Xiaoge) — copy its look exactly; image 2 … 小针 …; image 3 … 小煤球 …. Keep every character visually distinct; never merge their features.
 ```
 
 01 号图换成 `--cast 小格 蒜鸟`(仓库已自带蒜鸟,无需安装)。蒜鸟会按线稿锚点转成白底黑线,只保留一点淡紫。

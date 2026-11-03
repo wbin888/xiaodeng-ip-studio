@@ -1,6 +1,6 @@
 # 小灯 IP
 
-> 本技能原创 IP。气质继承“认真做荒诞事、不卖萌、嵌进结构干活”的方法,外形与小黑等既有 IP 刻意区分(见文末对照)。
+> 本技能原创 IP,曾是默认主角(现默认为小煤球)。气质:认真做荒诞事、不卖萌、嵌进结构干活;外形与小黑等既有 IP 刻意区分(见文末对照)。适合想冷峻、克制一些的文章。
 
 ## 一句话
 
@@ -66,6 +66,20 @@ Recurring IP character required:
 小灯 (Xiaodeng), an original thin stick-figure character whose head is a round LIGHT BULB. Thin black hand-drawn bulb outline, a small white screw base with two horizontal grooves under it, then a thin single-line body with thin line arms and legs (head much larger than body). NO eyes, NO mouth, NO eyebrows on the bulb — its only face is the FILAMENT inside, held by two thin support wires: lit = filament stands up as a sharp "M" zigzag; off = filament sags into a soft wave; flickering = filament broken into two pieces. Brightness is its state: lit = translucent warm yellow inside the bulb plus a few short yellow rays around it; off = pale grey inside, no rays; flickering = very faint yellow with dashed rays. Warm yellow appears ONLY on 小灯. Not an emoji idea bulb, not a 3D glass bulb, no glossy highlight, not solid black. 小灯 must perform the core conceptual action — plugging in a wire, lighting up a dark corner, being one bulb in a chain that lights up step by step, being unplugged, dimming its own knob, overheating in tangled wires — not decorate the scene. Serious, deadpan, slightly stubborn, slightly bizarre, NOT cute. Drawn with the SAME pen and line weight as every other object.
 ```
 
+## Prompt 替换段
+
+```text
+Color use:
+Black for main line art and 小灯's outline. Warm translucent yellow appears ONLY inside 小灯's bulb (and its short rays) when lit; it is its state signal, not a semantic color. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or system state. Color names are rendering guidance only — do NOT display them as visible text.
+
+Body integrity:
+小灯 has exactly one bulb head, one screw base, one thin line body, two thin arms, two thin legs; no eyes or mouth on the bulb; background lines stop at its outline. In a chain, only ONE bulb has a body; the rest are plain bulbs on the wire. At most one prop per hand.
+```
+
+## QA 外形锁定
+
+圆灯泡头 + 白色螺口灯座 + 细线身体;灯泡上无眼无嘴,表情只靠灯丝;暖黄只在泡内;亮 / 灭 / 闪与这一刻的文章状态一致。不是 emoji 灵感灯泡、不是 3D 玻璃灯泡。
+
 ## 与已有 IP 的区分
 
 | | 小灯(本技能) | 小黑(Ian) |
@@ -77,4 +91,4 @@ Recurring IP character required:
 
 ## 设定稿
 
-`assets/xiaodeng-sheet.png`(源文件 `assets/xiaodeng-sheet.svg`):亮 / 灭 / 闪 / 串联。生图时可作参考图(`--reference`)锁形象。
+`characters/xiaodeng/sheet.png`(源文件 `sheet.svg`):亮 / 灭 / 闪 / 串联。生图时可作参考图(`--reference`)锁形象。
