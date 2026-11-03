@@ -19,6 +19,25 @@
 
 一个**灯泡头的细线小人**:无眼无嘴,**灯丝就是表情,亮度就是状态**——想通就亮、卡住就灭、拿不准就闪。会接线、拔插头、调光、照亮盲点、串成一串灯标进度。认真、有点轴、不卖萌。完整设定见 `references/xiaodeng-ip.md`。
 
+## 角色库
+
+![内置角色库](assets/cast-overview.png)
+
+内置 5 个原创 IP,同一画风,说“这篇用小墨出演”即可换角,拆解方法不变:
+
+| 角色 | 外形 | 动作 | 适合 | 设定稿 |
+|---|---|---|---|---|
+| **小灯**(默认) | 灯泡头细线小人,无眼无嘴,灯丝即表情 | 亮 / 灭 / 闪 / 串联 / 接线 / 调光 | 想通、卡点、决策、进度 | [sheet](assets/xiaodeng-sheet.png) · [spec](references/xiaodeng-ip.md) |
+| **小墨** | 空心水滴 + 淡靛蓝晕染,竖线眼,无腿 | 流 / 分裂 / 合流 / 晕开 / 凝固 / 干涸 | 变化、扩散、流程 | [sheet](characters/xiaomo/sheet.png) · [spec](characters/xiaomo/character.md) |
+| **小针** | 青绿色回形针身,两点眼,无手臂 | 夹 / 串 / 钩 / 拉直 / 弯折 / 撑 | 连接、依赖、结构 | [sheet](characters/xiaozhen/sheet.png) · [spec](characters/xiaozhen/character.md) |
+| **小格** | 白底淡蓝方格纸,顶边撕口,单圆眼 | 记 / 贴 / 撕 / 折 / 叠 / 对齐 | 笔记、清单、待办 | [sheet](characters/xiaoge/sheet.png) · [spec](characters/xiaoge/character.md) |
+| **小方** | 白色正面纸盒,单圆眼,蓝点天线 | 吞 / 吐 / 封 / 分装 / 塞爆 / 叠 | 收集、归档、分发 | [sheet](characters/xiaofang/sheet.png) · [spec](characters/xiaofang/character.md) |
+
+另外可外接 [小互 IP Studio](https://github.com/xiaohuailabs/xiaohu-ip-studio) 的 **31 个角色**(需另装,© 小互):
+
+- 角色(15):淡淡、电量、丁零、方方、疯崽、木鱼、牛马、泡泡、破防君、缩缩、贴贴、替替、团团、小互、续命
+- 食物 / 符号(16):蕉绿、韭菜、续命咖啡、苦瓜脸、暴躁辣椒、蘑菇、柠檬精、茄子、三角、闪电、蒜鸟、叹号人、问号人、五角星、咸鱼、洋葱
+
 ## 两种用法
 
 | 你说 | 它做 |
@@ -63,6 +82,8 @@ references/
   qa-checklist.md            自检与迭代
   cast-swap.md               换角与角色包安全
   backends.md                生图后端
+characters/<id>/             内置换角:character.md + sheet.png(小墨 / 小针 / 小格 / 小方)
+assets/                      小灯设定稿、角色库总览图
 scripts/
   generate.py                生图(OpenAI 兼容端点,纯标准库)
   studio.py                  init / doctor
@@ -71,8 +92,8 @@ agents/openai.yaml           Codex agent 元数据
 
 ## 换角
 
-默认小灯。想让小互角色库里的角色出演,先安装 [xiaohu-ip-studio](https://github.com/xiaohuailabs/xiaohu-ip-studio)(放在同级目录或设置 `XIAOHU_STUDIO_DIR`),再说“这篇用牛马出演”。详见 `references/cast-swap.md`。
+默认小灯。想换内置角色,直接说“这篇用小墨 / 小针 / 小格 / 小方出演”。想让小互角色库里的角色出演,先安装 [xiaohu-ip-studio](https://github.com/xiaohuailabs/xiaohu-ip-studio)(放在同级目录或设置 `XIAOHU_STUDIO_DIR`),再说“这篇用牛马出演”。详见 `references/cast-swap.md`。
 
 ## 许可与署名
 
-MIT。小灯为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(本仓库不含角色图)。详见 `NOTICE.md`。
+MIT。小灯、小墨、小针、小格、小方均为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(本仓库不含角色图)。详见 `NOTICE.md`。

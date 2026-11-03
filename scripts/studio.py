@@ -58,6 +58,8 @@ def cmd_doctor():
     gen = SKILL_DIR / "scripts" / "generate.py"
     print(f"[{'OK' if gen.exists() else '!!'}] 生图脚本: {'在' if gen.exists() else '缺'}")
     ok = ok and gen.exists()
+    builtin = [(d / "character.md").read_text(encoding="utf-8").splitlines()[0].lstrip("# ").replace(" IP", "") for d in sorted((SKILL_DIR / "characters").glob("*/")) if (d / "character.md").exists()]
+    print(f"[{'OK' if builtin else '*'}] 内置角色库: 小灯(默认)" + (f" + {', '.join(builtin)}" if builtin else ""))
     pack = _cast_pack_dir()
     if pack:
         n = sum(1 for sub in ("characters", "food-mascots") if (pack / sub).is_dir()

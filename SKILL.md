@@ -16,7 +16,7 @@ version: 0.1.0
 
 - 不是商业插画、PPT 信息图、可爱卡通、素材库抽象图。
 - 默认演员是**小灯**(本技能原创 IP):灯泡头细线小人,无眼无嘴,灯丝即表情、亮度即状态(亮=想通 / 灭=卡住 / 闪=犹豫),认真做一件荒诞但成立的事——接线、照亮盲点、串联点亮、拔插头、调光。小灯必须承担核心动作,不当装饰。
-- 方法恒定,演员可换:用户指定时可换成小互 IP Studio 角色库里的角色(见 `references/cast-swap.md`)。
+- 方法恒定,演员可换:用户指定时可换成内置角色库的小墨 / 小针 / 小格 / 小方(`characters/`),或小互 IP Studio 角色库的 31 个角色(见 `references/cast-swap.md`)。
 
 ## 按需读参考(不要一次塞满上下文)
 
@@ -30,7 +30,8 @@ version: 0.1.0
 | `references/tracks.md` | 情绪图 / 解释图 / 四格 / 总览海报 各自画法 | 分轨后 |
 | `references/prompt-template.md` | 各轨 prompt 骨架 + 编辑提示 | 生成时 |
 | `references/qa-checklist.md` | 生成后检查、失败信号、迭代修法 | 生成后 |
-| `references/cast-swap.md` | 换角(小互角色库)与角色包安全规则 | 用户要换角时 |
+| `references/cast-swap.md` | 换角(内置角色库 + 小互角色库)与角色包安全规则 | 用户要换角时 |
+| `characters/<id>/character.md` | 内置换角角色包(小墨 / 小针 / 小格 / 小方) | 用户指定该角色时 |
 | `references/backends.md` | 生图脚本与后端配置 | 无内置生图工具时 |
 
 ## 工作流

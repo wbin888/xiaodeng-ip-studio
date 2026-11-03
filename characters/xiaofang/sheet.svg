@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="WenQuanYi Zen Hei, sans-serif">
+<defs>
+<filter id="r"><feTurbulence baseFrequency="0.03" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+<g id="legs"><path d="M-30 80 q-2 30 -8 52 h-14" /><path d="M30 80 q2 30 8 52 h14"/></g>
+</defs>
+<rect width="1600" height="900" fill="#fbfaf6"/>
+<text x="60" y="80" font-size="42" fill="#111">小方 · IP 设定稿</text>
+<text x="60" y="122" font-size="22" fill="#666">白色正面方盒 / 一只大圆眼 / 一根蓝点天线 / 可掀开盒盖 / 两条细腿 / 无嘴 无胶带</text>
+<g filter="url(#r)" stroke="#111" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <!-- 1 standard -->
+ <g transform="translate(260,520)">
+  <path d="M0 -150 q-4 -40 6 -62" /><circle cx="7" cy="-218" r="9" fill="#2f6fe0" stroke="#111"/>
+  <rect x="-90" y="-150" width="180" height="26" fill="#fff"/>
+  <rect x="-80" y="-124" width="160" height="204" fill="#fff"/>
+  <circle cx="0" cy="-40" r="34" fill="#fff"/><circle cx="6" cy="-36" r="13" fill="#111"/>
+  <use href="#legs"/>
+ </g>
+ <!-- 2 swallow: lid open -->
+ <g transform="translate(640,520)">
+  <path d="M-80 -124 l-40 -100 l26 -6 l40 100" fill="#fff"/>
+  <path d="M-50 -128 q8 -34 -2 -64"/><circle cx="-44" cy="-198" r="9" fill="#2f6fe0" stroke="#111"/>
+  <path d="M-80 -124 h160" />
+  <g transform="rotate(-8 20 -170)"><rect x="-10" y="-200" width="60" height="44" fill="#fff"/><path d="M-4 -186 h46 M-4 -174 h34" stroke-width="2.5"/></g>
+  <path d="M30 -150 v20 m-8 -10 l8 10 l8 -10" stroke-width="2.5"/>
+  <rect x="-80" y="-124" width="160" height="204" fill="#fff"/>
+  <circle cx="0" cy="-40" r="34" fill="#fff"/><circle cx="2" cy="-48" r="13" fill="#111"/>
+  <use href="#legs"/>
+ </g>
+ <!-- 3 seal / pack -->
+ <g transform="translate(1000,520)">
+  <path d="M0 -150 q-4 -40 6 -62"/><circle cx="7" cy="-218" r="9" fill="#2f6fe0" stroke="#111"/>
+  <rect x="-90" y="-150" width="180" height="26" fill="#fff"/>
+  <rect x="-80" y="-124" width="160" height="204" fill="#fff"/>
+  <path d="M-34 -46 q34 26 68 0" />
+  <rect x="96" y="0" width="56" height="56" fill="#fff"/><rect x="104" y="-50" width="40" height="40" fill="#fff"/>
+  <path d="M80 30 h16"/>
+  <use href="#legs"/>
+ </g>
+ <!-- 4 overstuffed, antenna droop -->
+ <g transform="translate(1360,520)">
+  <path d="M-40 -158 q-20 -30 -50 -14"/><circle cx="-96" cy="-168" r="9" fill="#2f6fe0" stroke="#111"/>
+  <path d="M-90 -150 l178 -18 l2 26 l-178 18z" fill="#fff"/>
+  <path d="M-60 -140 l10 -24 M-20 -150 l6 -28 M30 -152 l-4 -26 M64 -160 l14 -20" stroke-width="2.5"/>
+  <rect x="-80" y="-124" width="160" height="204" fill="#fff"/>
+  <path d="M-90 -100 l-14 -6 M90 -100 l14 -6 M-90 40 l-14 6 M90 40 l14 6" stroke-width="2.5"/>
+  <circle cx="0" cy="-40" r="34" fill="#fff"/><circle cx="0" cy="-30" r="13" fill="#111"/>
+  <path d="M-30 -84 l20 8" />
+  <use href="#legs"/>
+ </g>
+</g>
+<g font-size="26" fill="#111" text-anchor="middle">
+ <text x="260" y="720">标准站姿</text><text x="640" y="720">吞:掀盖收件</text>
+ <text x="1000" y="720">封 / 分装吐出</text><text x="1360" y="720">塞爆:天线下垂</text>
+</g>
+<g font-size="20" fill="#666" text-anchor="middle">
+ <text x="260" y="755">正面平视,不做 3/4 侧</text><text x="640" y="755">盒盖是唯一"嘴"</text>
+ <text x="1000" y="755">闭眼弧线 = 专注打包</text><text x="1360" y="755">情绪只靠眼 + 天线</text>
+</g>
+<text x="60" y="850" font-size="20" fill="#2f6fe0">● 蓝点 = 固定招牌色(唯一非语义色)</text>
+<text x="1540" y="850" font-size="18" fill="#999" text-anchor="end">xiaodeng-ip-studio · 内置换角</text>
+</svg>
