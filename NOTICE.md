@@ -9,6 +9,6 @@ xiaodeng-ip-studio 是以下两个 MIT 开源技能的融合衍生作品:
 - **xiaohu-ip-studio** by 小互 (xiaohu) — <https://github.com/xiaohuailabs/xiaohu-ip-studio>
   逐节枚举、深层提炼 Q0–Q4、三轨分流、隐喻逐一对照、比例规则、视觉契约、角色包安全规则及 `scripts/generate.py` / `scripts/studio.py`(改编自 illo.py)来源于此。
   xiaohu-ip-studio 的方法论与工程范式借鉴自 illo by Trevin Chow(MIT,<https://github.com/tmchow/illo-skill>)。
-  小互的 IP 角色形象与手绘线稿画风 © 小互,本仓库**不包含**任何角色图片。`python3 scripts/studio.py cast install` 只是从上游 git clone 到用户本地的 `vendor/`(已 gitignore),角色使用遵循 xiaohu-ip-studio 自身的 LICENSE 与 NOTICE;`references/cast-roster.md` 仅收录角色名称与文字描述的索引。
+  小互的 IP 角色形象与手绘线稿画风 © 小互,本仓库的 `cast-xiaohu/` 依其 MIT License 转载了 31 个角色的 `character.md` 与参考图(缩至 1024px,源自上游提交 9d3091e),并在该目录内原样保留其 `LICENSE` 与 `NOTICE`;`assets/xiaohu-cast-overview.png` 为这些参考图的拼版。角色形象与画风版权仍归 © 小互;如需商用,请自行确认生成图的版权合规。
 
 再分发或二次开发时,请保留本 NOTICE 与上述署名。

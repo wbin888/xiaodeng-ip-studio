@@ -187,4 +187,4 @@ python3 scripts/generate.py --prompt-file prompts/03.md --cast 小格 小针 小
 Reference images: image 1 is the character sheet of 小格 (Xiaoge) — copy its look exactly; image 2 … 小针 …; image 3 … 小灯 …. Keep every character visually distinct; never merge their features.
 ```
 
-01 号图换成 `--cast 小格 蒜鸟`(需先 `python3 scripts/studio.py cast install`)。蒜鸟会按线稿锚点转成白底黑线,只保留一点淡紫。
+01 号图换成 `--cast 小格 蒜鸟`(仓库已自带蒜鸟,无需安装)。蒜鸟会按线稿锚点转成白底黑线,只保留一点淡紫。

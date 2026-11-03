@@ -4,7 +4,7 @@
 
 - **来源**:有两类。
   - 「内置」是本仓库原创的 5 个角色,开箱即用。
-  - 「小互」是小互 IP Studio 的 31 个角色。它们的形象与画风 © 小互,本仓库只收录文字索引,不收图。先运行 `python3 scripts/studio.py cast install` 安装,再用 `cast list` 和 `cast show <名>` 查看。
+  - 「小互」是小互 IP Studio 的 31 个角色。它们的形象与画风 © 小互。仓库的 `cast-xiaohu/` 已附带全部角色包和 1024px 参考图(按其 MIT + NOTICE 转载),开箱即用;用 `cast list` 和 `cast show <名>` 查看。总览图:`assets/xiaohu-cast-overview.png`。
 - **肢体**:分三档。
   - **主动**:有手,能拉、递、插、写。
   - **半主动**:只有腿或身体,能夹、钩、顶、跑。

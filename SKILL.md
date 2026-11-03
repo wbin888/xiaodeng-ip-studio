@@ -16,7 +16,7 @@ version: 0.2.0
 
 - 不是商业插画、PPT 信息图、可爱卡通、素材库抽象图。
 - 默认演员是**小灯**(本技能原创 IP):灯泡头细线小人,无眼无嘴,灯丝即表情、亮度即状态(亮=想通 / 灭=卡住 / 闪=犹豫),认真做一件荒诞但成立的事——接线、照亮盲点、串联点亮、拔插头、调光。小灯必须承担核心动作,不当装饰。
-- 方法恒定,演员可换:角色库共 36 个——内置 5 个(小灯 / 小墨 / 小针 / 小格 / 小方)+ 小互 IP Studio 的 31 个(`python3 scripts/studio.py cast install` 一键接入)。速查见 `references/cast-roster.md`,换角见 `references/cast-swap.md`。
+- 方法恒定,演员可换:角色库共 36 个——内置 5 个(小灯 / 小墨 / 小针 / 小格 / 小方)+ 小互 IP Studio 的 31 个(已随仓库附带在 `cast-xiaohu/`,开箱即用)。速查见 `references/cast-roster.md`,换角见 `references/cast-swap.md`。
 - 一篇可以同时用 **2-3 个 IP**(主角 + 搭档,各自代表一个固定的语义),规则见 `references/ensemble.md`。
 
 ## 按需读参考(不要一次塞满上下文)
