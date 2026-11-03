@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900" font-family="WenQuanYi Zen Hei, sans-serif">
+<defs>
+<filter id="r"><feTurbulence baseFrequency="0.03" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter>
+<filter id="w"><feTurbulence baseFrequency="0.06" numOctaves="3" seed="2"/><feDisplacementMap in="SourceGraphic" scale="8"/><feGaussianBlur stdDeviation="1.2"/></filter>
+<radialGradient id="ink" cx="50%" cy="60%" r="60%"><stop offset="0" stop-color="#7d8fd6" stop-opacity="0.22"/><stop offset="0.7" stop-color="#3f51b5" stop-opacity="0.45"/><stop offset="1" stop-color="#283593" stop-opacity="0.55"/></radialGradient>
+<g id="drop">
+ <path d="M0 -100 C28 -55 70 -15 70 35 C70 80 38 100 0 100 C-38 100 -70 80 -70 35 C-70 -15 -28 -55 0 -100 Z" fill="url(#ink)" filter="url(#w)" stroke="none"/>
+ <path d="M0 -100 C28 -55 70 -15 70 35 C70 80 38 100 0 100 C-38 100 -70 80 -70 35 C-70 -15 -28 -55 0 -100 Z" fill="none"/>
+ <path d="M0 -100 q4 -20 22 -18 q12 3 5 14 q-5 5 -10 0"/>
+ <path d="M-18 32 v20 M18 32 v20" stroke-width="5"/>
+</g>
+</defs>
+<rect width="1600" height="900" fill="#fbfaf6"/>
+<text x="60" y="80" font-size="42" fill="#111">小墨 · IP 设定稿</text>
+<text x="60" y="122" font-size="22" fill="#666">空心描边水滴 / 内里淡靛蓝晕染 / 尖角卷钩 / 两道竖线眼 / 无腿,滑行留墨迹 / 无嘴</text>
+<g stroke="#111" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#r)">
+ <!-- 1 standard -->
+ <g transform="translate(160,500)"><use xlink:href="#drop"/><path d="M-90 102 h180" stroke-width="2"/></g>
+ <!-- 2 flow -->
+ <g transform="translate(420,500)">
+  <path d="M-120 102 h240" stroke-width="2"/>
+  <path d="M-120 96 q60 -8 110 -4" stroke="#3f51b5" stroke-opacity="0.45" stroke-width="10" filter="url(#w)"/>
+  <g transform="translate(30,25) scale(0.75) skewX(-14)"><use xlink:href="#drop"/></g>
+  <path d="M-60 40 h-30 M-60 60 h-44" stroke-width="2.5"/>
+ </g>
+ <!-- 3 split -->
+ <g transform="translate(680,500)">
+  <g transform="translate(-40,-20) scale(0.6)"><use xlink:href="#drop"/></g>
+  <path d="M10 -30 l50 -40 M10 -10 l55 0 M10 10 l50 40" stroke="#e8772e" stroke-width="3"/>
+  <g transform="translate(85,-80) scale(0.3)"><use xlink:href="#drop"/></g>
+  <g transform="translate(95,-10) scale(0.3)"><use xlink:href="#drop"/></g>
+  <g transform="translate(85,60) scale(0.3)"><use xlink:href="#drop"/></g>
+ </g>
+ <!-- 4 spread -->
+ <g transform="translate(940,500)">
+  <ellipse cx="0" cy="88" rx="110" ry="22" fill="#3f51b5" fill-opacity="0.12" stroke="#3f51b5" stroke-opacity="0.4" stroke-width="2" filter="url(#w)"/>
+  <ellipse cx="0" cy="88" rx="75" ry="15" fill="#3f51b5" fill-opacity="0.15" stroke="none" filter="url(#w)"/>
+  <g transform="translate(0,25) scale(0.7,0.62)"><use xlink:href="#drop"/></g>
+ </g>
+ <!-- 5 solidify -->
+ <g transform="translate(1200,500)">
+  <rect x="-60" y="-40" width="120" height="140" fill="#3f51b5" fill-opacity="0.3"/>
+  <path d="M0 -40 q4 -20 22 -18 q12 3 5 14 q-5 5 -10 0"/>
+  <path d="M-18 30 v20 M18 30 v20" stroke-width="5"/>
+  <rect x="78" y="40" width="70" height="60" stroke-width="2"/>
+  <rect x="94" y="54" width="38" height="32" stroke="#d93a2b" stroke-width="3"/>
+  <path d="M104 62 v16 M112 62 v16 M120 62 v16" stroke="#d93a2b" stroke-width="2"/>
+ </g>
+ <!-- 6 dry -->
+ <g transform="translate(1440,500)">
+  <path d="M-90 102 h180" stroke-width="2"/>
+  <g transform="translate(0,52) scale(0.5)"><use xlink:href="#drop"/></g>
+  <path d="M-30 50 l10 4 l-4 8 M28 44 l-8 6 l4 8 M-6 100 l4 -10 l6 4" stroke-width="2"/>
+  <path d="M-70 -40 l10 18 M-40 -60 l0 20 M40 -60 l0 20 M70 -40 l-10 18" stroke="#e8772e" stroke-width="2.5"/>
+  <circle cx="0" cy="-100" r="22" stroke="#e8772e" stroke-width="2.5"/>
+ </g>
+</g>
+<g font-size="26" fill="#111" text-anchor="middle">
+ <text x="160" y="720">标准形</text><text x="420" y="720">流</text><text x="680" y="720">分裂</text>
+ <text x="940" y="720">晕开</text><text x="1200" y="720">凝固</text><text x="1440" y="720">干涸</text>
+</g>
+<g font-size="19" fill="#666" text-anchor="middle">
+ <text x="160" y="752">卷钩尖角 + 竖线眼</text><text x="420" y="752">滑行,身后留墨迹</text><text x="680" y="752">拆分 / 分发</text>
+ <text x="940" y="752">传播 / 扩散</text><text x="1200" y="752">沉淀成印章</text><text x="1440" y="752">枯竭 / 没反馈</text>
+</g>
+<text x="60" y="850" font-size="20" fill="#3f51b5">● 淡靛蓝晕染 = 固定招牌色(只在小墨身上)· 不是实心黑,不是实心蓝</text>
+<text x="1540" y="850" font-size="18" fill="#999" text-anchor="end">xiaodeng-ip-studio · 内置换角</text>
+</svg>

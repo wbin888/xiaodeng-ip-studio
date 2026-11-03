@@ -119,4 +119,8 @@ Regenerate this illustration with the same core meaning and simple layout, but m
 
 ## 换角时
 
-用户换成小互角色库里的角色:把“Recurring IP character”整段替换为该角色 `character.md` 的英文 prompt 段,并传其锚点图作为 `--reference`。其余段落不变(见 `cast-swap.md`)。
+换成其他单个角色:把 “Recurring IP character” 整段替换为该角色 `character.md` 的英文 prompt 段,`Color use` / `Body integrity` 换成它的替换段;生图时用 `--cast <角色名>` 自动带上参考图。其余段落不变(见 `cast-swap.md`)。
+
+## 多 IP 同框
+
+2-3 个角色同框时,把 “Recurring IP character required” 整段换成 `ensemble.md` 里的**多角色段**(Character 1/2/3 + Who does what + 合并的 Color use / Body integrity),用 `--cast 角色1 角色2 [角色3]` 生成,顺序与 Character 编号一致。四格可在每格写明本格出场的角色。

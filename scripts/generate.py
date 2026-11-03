@@ -11,11 +11,16 @@
 
   文生图:       python3 generate.py --prompt-file p.md --out out.png
   图生图(锁角色): python3 generate.py --prompt-file p.md --reference <锚点图> --out out.png
+  按角色名锁形象: python3 generate.py --prompt-file p.md --cast 小灯 小针 --out out.png
+                  (自动附上每个角色的参考图,并在 prompt 末尾注明“参考图 N = 哪个角色”;多 IP 同框用)
 
 prompt 文件 = YAML 头(aspect_ratio 必填) + 正文 prompt。纯标准库,无第三方依赖。
 """
 from __future__ import annotations
 import argparse, base64, json, os, pathlib, sys, time, urllib.error, urllib.request, uuid
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import castlib  # noqa: E402
 
 CONFIG_PATH = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaodeng-ip-studio" / "config.yaml"
 
@@ -335,6 +340,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt-file", required=True)
     ap.add_argument("--reference", nargs="*", default=[])
+    ap.add_argument("--cast", nargs="*", default=[], help="按角色名附参考图(最多 3 个),如 --cast 小灯 牛马")
     ap.add_argument("--out", required=True)
     ap.add_argument("--model", default=None)
     ap.add_argument("--dry-run", action="store_true", help="只校验 prompt 文件与参考图,不调用 API")
@@ -346,13 +352,34 @@ def main():
     if orient_err:
         eprint(f"[错误] {orient_err}")
         sys.exit(2)
+    cast = []
+    if args.cast:
+        if len(args.cast) > 3:
+            eprint("[错误] 同一张图最多 3 个 IP(见 references/ensemble.md)")
+            sys.exit(2)
+        roster = castlib.load_roster()
+        for q in args.cast:
+            c = castlib.resolve(q, roster)
+            if not c:
+                eprint(f"[错误] 找不到角色「{q}」;先 `python3 scripts/studio.py cast list`(小互角色需先 cast install)")
+                sys.exit(2)
+            if not c["ref"]:
+                eprint(f"[错误] 角色「{c['name']}」没有参考图")
+                sys.exit(2)
+            cast.append(c)
+        start = len(args.reference)
+        args.reference = list(args.reference) + [c["ref"] for c in cast]
+        body = body.rstrip() + "\n\nReference images: " + "; ".join(
+            f"image {start + i + 1} is the character sheet of {c['name']} ({c['en'] or c['id']}) — copy its look exactly"
+            for i, c in enumerate(cast)) + (". Keep every character visually distinct; never merge their features." if len(cast) > 1 else ".")
     missing = [r for r in args.reference if not pathlib.Path(r).exists()]
     if missing:
         eprint(f"[错误] 参考图不存在: {', '.join(missing)}")
         sys.exit(2)
     if args.dry_run:
         print(json.dumps({"ok": True, "aspect": aspect, "size": aspect_to_size(aspect),
-                          "reference": len(args.reference), "prompt_chars": len(body)}, ensure_ascii=False))
+                          "reference": len(args.reference), "cast": [c["name"] for c in cast],
+                          "prompt_chars": len(body)}, ensure_ascii=False))
         return
 
     cfg = load_config()
