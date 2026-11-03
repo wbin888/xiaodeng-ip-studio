@@ -69,7 +69,7 @@ def cmd_cast(argv):
             ok = "✓" if c["ref"] and pathlib.Path(c["ref"]).exists() else "·"
             print(f"  {ok} {c['name']:<6} ({c['id']}) {c['look']}{extra}")
         if not castlib.xiaohu_dir():
-            print("\n[*] 小互角色库未安装:python3 scripts/studio.py cast install")
+            print("\n[*] 小互角色库缺失(仓库应自带 cast-xiaohu/;也可 python3 scripts/studio.py cast install)")
         return
     if sub == "show" and len(argv) > 1:
         for q in argv[1:]:
@@ -111,7 +111,8 @@ def cmd_doctor():
         noref = [c["name"] for c in ext if not c["ref"]]
         print(f"[OK] 小互角色库: {pack}({len(ext)} 个角色)" + (f";无参考图: {noref}" if noref else ""))
     else:
-        print("[*] 小互角色库: 未安装(可选;python3 scripts/studio.py cast install)")
+        print("[!!] 小互角色库: 找不到(仓库应自带 cast-xiaohu/;或 python3 scripts/studio.py cast install)")
+        ok = False
     print("=== " + ("✅ 就绪" if ok else "❌ 有问题,见上") + " ===")
     sys.exit(0 if ok else 1)
 

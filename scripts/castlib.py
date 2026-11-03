@@ -9,6 +9,7 @@ import os, pathlib, re
 SKILL_DIR = pathlib.Path(__file__).resolve().parent.parent
 XIAOHU_REPO = "https://github.com/xiaohuailabs/xiaohu-ip-studio"
 VENDOR_DIR = SKILL_DIR / "vendor" / "xiaohu-ip-studio"
+BUNDLED_DIR = SKILL_DIR / "cast-xiaohu"  # 随仓库附带的 31 个角色(1024px 参考图 + 角色包,© 小互,MIT + NOTICE)
 
 BUILTIN = [
     # id, 中文名, 英文名, 角色包, 设定稿, 一句话
@@ -21,10 +22,10 @@ BUILTIN = [
 
 
 def xiaohu_dir():
-    """按顺序查找小互角色包:环境变量 → 本技能 vendor/ → 同级目录 → ~/.claude/skills。"""
+    """按顺序查找小互角色包:环境变量 → vendor/(cast install 拉的完整上游)→ 仓库自带 cast-xiaohu/ → 同级目录 → ~/.claude/skills。"""
     env = os.environ.get("XIAOHU_STUDIO_DIR")
     cands = [pathlib.Path(env).expanduser()] if env else []
-    cands += [VENDOR_DIR, SKILL_DIR.parent / "xiaohu-ip-studio",
+    cands += [VENDOR_DIR, BUNDLED_DIR, SKILL_DIR.parent / "xiaohu-ip-studio",
               pathlib.Path.home() / ".claude" / "skills" / "xiaohu-ip-studio"]
     for c in cands:
         if (c / "characters").is_dir():

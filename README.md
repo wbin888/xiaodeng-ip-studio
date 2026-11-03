@@ -35,12 +35,14 @@
 
 ### 接入小互 IP Studio 的 31 个角色
 
-[小互 IP Studio](https://github.com/xiaohuailabs/xiaohu-ip-studio) 的 31 个角色可以**一键接入**。角色图从上游拉到本地 `vendor/`,本仓库不分发(© 小互):
+![小互角色库 31 个](assets/xiaohu-cast-overview.png)
+
+[小互 IP Studio](https://github.com/xiaohuailabs/xiaohu-ip-studio) 的 31 个角色**已随仓库附带**(`cast-xiaohu/`:角色包 + 1024px 参考图,© 小互,按其 MIT + NOTICE 转载),克隆下来就能用:
 
 ```bash
-python3 scripts/studio.py cast install      # 或:bash install.sh --with-xiaohu
 python3 scripts/studio.py cast list         # 36 个角色,按来源分组
 python3 scripts/studio.py cast show 牛马     # 角色包 + 参考图路径
+python3 scripts/studio.py cast install      # 可选:拉上游最新版 / 原尺寸图到 vendor/
 ```
 
 - 角色(15):淡淡、电量、丁零、方方、疯崽、木鱼、牛马、泡泡、破防君、缩缩、贴贴、替替、团团、小互、续命
@@ -91,7 +93,7 @@ python3 scripts/generate.py --prompt-file p.md --cast 小格 小针 小灯 --out
 
 ```bash
 git clone https://github.com/wbin888/xiaodeng-ip-studio ~/.claude/skills/xiaodeng-ip-studio
-cd ~/.claude/skills/xiaodeng-ip-studio && bash install.sh                 # 加 --with-xiaohu 可同时接入 31 个小互角色
+cd ~/.claude/skills/xiaodeng-ip-studio && bash install.sh                 # 加 --with-xiaohu 可额外拉取上游最新版小互角色库
 ```
 
 只做分析、或 agent 自带生图工具时,不需要配置 API key。
@@ -116,7 +118,8 @@ references/
 characters/<id>/             内置换角:character.md + sheet.png(小墨 / 小针 / 小格 / 小方)
 assets/                      小灯设定稿、角色库总览图、多 IP 示例图
 examples/ensemble-demo.md    3 个 IP 的完整示例(文案 + 方案 + prompt)
-vendor/                      cast install 拉取的小互角色库(不入库)
+cast-xiaohu/                 小互 31 个角色(character.md + 1024px 参考图 + 原 LICENSE/NOTICE)
+vendor/                      cast install 拉取的上游完整版(可选,不入库)
 scripts/
   generate.py                生图(OpenAI 兼容端点,纯标准库)
   studio.py                  init / doctor / cast list·show·install
@@ -126,8 +129,8 @@ agents/openai.yaml           Codex agent 元数据
 
 ## 换角
 
-默认小灯。想换内置角色,直接说“这篇用小墨 / 小针 / 小格 / 小方出演”。想让小互角色出演,先 `python3 scripts/studio.py cast install`,再说“这篇用牛马出演”。想同时用多个角色,说“这篇用小灯 + 替替”。详见 `references/cast-swap.md` 和 `references/ensemble.md`。
+默认小灯。想换内置角色,直接说“这篇用小墨 / 小针 / 小格 / 小方出演”。想让小互角色出演,直接说“这篇用牛马出演”。想同时用多个角色,说“这篇用小灯 + 替替”。详见 `references/cast-swap.md` 和 `references/ensemble.md`。
 
 ## 许可与署名
 
-MIT。小灯、小墨、小针、小格、小方均为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(本仓库不含角色图;`cast install` 从上游拉取,遵循其 MIT + NOTICE)。详见 `NOTICE.md`。
+MIT。小灯、小墨、小针、小格、小方均为本技能原创 IP;拆解方法源自 Ian 小黑;小互角色与画风 © 小互(`cast-xiaohu/` 按其 MIT 转载,保留原 LICENSE 与 NOTICE)。详见 `NOTICE.md`。

@@ -23,9 +23,13 @@
 
 用户只说“换个角色”但没指定 → 按文章主题推荐 1-2 个内置角色(讲变化扩散→小墨,讲连接依赖→小针,讲笔记清单→小格,讲收集归档→小方),再提一句可接小互角色库。
 
-## 小互角色(31 个,一键接入)
+## 小互角色(31 个,已随仓库附带)
 
-本仓库**不分发**小互的角色图(角色形象与画风 © 小互)。用一条命令从上游拉取到本技能的 `vendor/` 目录(已在 .gitignore 中):
+![小互角色库](../assets/xiaohu-cast-overview.png)
+
+仓库的 `cast-xiaohu/` 已附带 31 个角色的 `character.md` 和 1024px 参考图(角色形象与画风 © 小互,按其 MIT + NOTICE 转载,目录内保留了原 LICENSE 与 NOTICE),**不用安装就能用**。
+
+想要上游最新版或原尺寸参考图(约 3MB/张),可以再拉一份完整仓库到 `vendor/`(已在 .gitignore 中),它会优先于 `cast-xiaohu/`:
 
 ```bash
 python3 scripts/studio.py cast install      # 首次是下载,之后再运行就是更新
@@ -36,8 +40,9 @@ bash install.sh --with-xiaohu              # 或者安装时一并装上
 
 1. 环境变量 `XIAOHU_STUDIO_DIR`
 2. 本技能的 `vendor/xiaohu-ip-studio`(`cast install` 的默认位置)
-3. 与本技能同级目录 `../xiaohu-ip-studio`
-4. `~/.claude/skills/xiaohu-ip-studio`
+3. 仓库自带的 `cast-xiaohu/`
+4. 与本技能同级目录 `../xiaohu-ip-studio`
+5. `~/.claude/skills/xiaohu-ip-studio`
 
 查看与使用:
 
