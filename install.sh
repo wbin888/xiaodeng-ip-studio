@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 小灯 IP Studio · 安装 / 自检
+# 小煤球 IP Studio(xiaomeiqiu-ip-studio)· 安装 / 自检
 #   bash install.sh                 交互式
 #   bash install.sh --with-xiaohu   额外拉取上游最新版小互角色库到 vendor/(仓库已自带 cast-xiaohu/,可不装)
 set -euo pipefail

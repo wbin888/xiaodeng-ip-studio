@@ -1,6 +1,6 @@
 interface:
-  display_name: "小灯 IP Studio"
-  short_description: "像小黑一样拆解中文文章的配图方案,并生成小灯出演的怪诞手绘正文配图"
-  default_prompt: "Use $xiaodeng-ip-studio 帮我拆解这篇中文文章的配图方案。"
+  display_name: "小煤球 IP Studio"
+  short_description: "像小黑一样拆解中文文章的配图方案,并生成小煤球出演的怪诞手绘正文配图"
+  default_prompt: "Use $xiaomeiqiu-ip-studio 帮我拆解这篇中文文章的配图方案。"
 policy:
   allow_implicit_invocation: true

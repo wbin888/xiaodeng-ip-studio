@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""xiaodeng-ip-studio CLI:init(填 key) / doctor(自检) / cast(角色库:list / show / install)。纯标准库。改编自 xiaohu-ip-studio 的 illo.py(MIT)。"""
+"""xiaomeiqiu-ip-studio CLI:init(填 key) / doctor(自检) / cast(角色库:list / show / install)。纯标准库。改编自 xiaohu-ip-studio 的 illo.py(MIT)。"""
 from __future__ import annotations
 import getpass, os, pathlib, shutil, subprocess, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import castlib  # noqa: E402
 
-CONFIG_DIR = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaodeng-ip-studio"
+CONFIG_DIR = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaomeiqiu-ip-studio"
 CONFIG_PATH = CONFIG_DIR / "config.yaml"
+LEGACY_CONFIG = CONFIG_DIR.parent / "xiaodeng-ip-studio" / "config.yaml"  # 改名前的旧配置,只读兜底
 SKILL_DIR = pathlib.Path(__file__).resolve().parent.parent
 
 REQUIRED_REFS = [
-    "analysis-playbook.md", "plan-template.md", "metaphor-method.md", "xiaodeng-ip.md",
+    "analysis-playbook.md", "plan-template.md", "metaphor-method.md", "xiaomeiqiu-ip.md",
     "style-dna.md", "tracks.md", "prompt-template.md", "qa-checklist.md", "cast-swap.md", "backends.md",
     "cast-roster.md", "ensemble.md",
 ]
 
 
 def cmd_init():
-    print("=== xiaodeng-ip-studio 配置生图 ===")
+    print("=== xiaomeiqiu-ip-studio 配置生图 ===")
     print(f"配置将写到: {CONFIG_PATH}\n支持任何 OpenAI 兼容图像端点;key 只存本地、永不上传。\n")
     base = input("图像 API base_url [https://api.openai.com/v1]: ").strip() or "https://api.openai.com/v1"
     model = input("图像模型 model [gpt-image-2]: ").strip() or "gpt-image-2"
@@ -88,10 +89,11 @@ def cmd_doctor():
     ok = True
     print("=== doctor 自检 ===")
     print(f"[*] python: {sys.version.split()[0]}")
-    if CONFIG_PATH.exists():
-        txt = CONFIG_PATH.read_text(encoding="utf-8")
+    cfg = CONFIG_PATH if CONFIG_PATH.exists() or not LEGACY_CONFIG.exists() else LEGACY_CONFIG
+    if cfg.exists():
+        txt = cfg.read_text(encoding="utf-8")
         has_key = ("api_key" in txt) and ('api_key: "<' not in txt) and ('api_key: ""' not in txt)
-        print(f"[{'OK' if has_key else '*'}] config: {CONFIG_PATH} {'(key 已填)' if has_key else '(缺 key;用脚本生图前跑 init)'}")
+        print(f"[{'OK' if has_key else '*'}] config: {cfg} {'(key 已填)' if has_key else '(缺 key;用脚本生图前跑 init)'}")
     else:
         print(f"[*] 未配置生图脚本: {CONFIG_PATH}(只做分析 / 用内置生图工具可忽略;用脚本生图前跑 init)")
     missing = [r for r in REQUIRED_REFS if not (SKILL_DIR / "references" / r).exists()]

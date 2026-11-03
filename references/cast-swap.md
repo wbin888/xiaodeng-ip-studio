@@ -1,12 +1,14 @@
 # 换角:内置角色库 + 小互 IP Studio 角色
 
-默认小灯出演。仅当用户明确要求“换成小墨 / 柠檬精 / 牛马 / 用某个角色”时启用。方法论不变,只替换演员。
+默认小煤球出演。仅当用户明确要求“换成小墨 / 柠檬精 / 牛马 / 用某个角色”时启用。方法论不变,只替换演员。
 
 ## 内置角色库(本仓库自带,原创)
 
 | 角色 | 一句话 | 擅长 | 角色包 |
 |---|---|---|---|
-| 小灯(默认) | 灯泡头细线小人,灯丝即表情 | 想通、卡点、决策、进度 | `references/xiaodeng-ip.md` |
+| 小煤球(默认) | 圆胖小黑猫团,奶白肚皮,头顶两片小绿芽 | 想通、卡点、做减法、归类、进度 | `references/xiaomeiqiu-ip.md` |
+| 小灯 | 灯泡头细线小人,灯丝即表情 | 想通、卡点、决策、进度 | `characters/xiaodeng/` |
+| 小南瓜 | 矮胖橙南瓜,两片小芽,豆豆眼 + 腮红 | 成长、积累、收获、播种 | `characters/xiaonangua/` |
 | 小墨 | 靛蓝墨滴,竖线眼,无腿 | 变化、扩散、流程 | `characters/xiaomo/` |
 | 小针 | 青绿回形针,两点眼,无手臂 | 连接、依赖、结构 | `characters/xiaozhen/` |
 | 小格 | 方格纸,撕口,单圆眼 | 笔记、清单、待办 | `characters/xiaoge/` |
@@ -16,12 +18,12 @@
 
 换成内置角色时:
 1. 读 `characters/<id>/character.md`。
-2. `prompt-template.md` 里的小灯 IP 段 → 换成该角色的**英文 prompt 段**;`Color use` 与 `Body integrity` → 换成该角色的 **Prompt 替换段**。
+2. `prompt-template.md` 里的小煤球 IP 段 → 换成该角色的**英文 prompt 段**;`Color use` 与 `Body integrity` → 换成该角色的 **Prompt 替换段**。
 3. 隐喻动作从该角色的**动作库**里挑;情绪图用它的身体状态演。
-4. QA 时用该角色的 **QA 外形锁定** 替换小灯那条。
+4. QA 时用该角色的 **QA 外形锁定** 替换小煤球那条。
 5. 用脚本生图时可加 `--reference characters/<id>/sheet.png` 锁形象。
 
-用户只说“换个角色”但没指定 → 按文章主题推荐 1-2 个内置角色(讲变化扩散→小墨,讲连接依赖→小针,讲笔记清单→小格,讲收集归档→小方),再提一句可接小互角色库。
+用户只说“换个角色”但没指定 → 按文章主题推荐 1-2 个内置角色(讲决策接通→小灯,讲成长积累→小南瓜,讲变化扩散→小墨,讲连接依赖→小针,讲笔记清单→小格,讲收集归档→小方),再提一句可接小互角色库。
 
 ## 小互角色(31 个,已随仓库附带)
 
@@ -47,7 +49,7 @@ bash install.sh --with-xiaohu              # 或者安装时一并装上
 查看与使用:
 
 ```bash
-python3 scripts/studio.py cast list            # 36 个角色,按来源分组
+python3 scripts/studio.py cast list            # 38 个角色,按来源分组
 python3 scripts/studio.py cast show 牛马 柠檬精  # 角色包与参考图路径
 python3 scripts/generate.py --prompt-file p.md --cast 牛马 --out 01.png
 ```

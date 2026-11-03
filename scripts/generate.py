@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""xiaodeng-ip-studio 生图脚本(改编自 xiaohu-ip-studio,MIT)
+"""xiaomeiqiu-ip-studio 生图脚本(改编自 xiaohu-ip-studio,MIT)
 
 走 OpenAI 兼容图像端点,自带两种后端(config.yaml 的 backend 字段,缺省自动判断):
   - apimart-task : 异步任务模式(提交 /images/generations → 拿 task_id → 轮询 /tasks/{id} → 下载),
                    适配 apimart 等网关的 GPT-image-2;图生图用 image_urls(base64 data URI)。
   - openai-sync  : 标准同步(/images/generations 直返 b64/url;图生图走 /images/edits multipart)。
 
-读 ~/.config/xiaodeng-ip-studio/config.yaml(用 studio.py init 写入,不内置任何密钥)。
+读 ~/.config/xiaomeiqiu-ip-studio/config.yaml(用 studio.py init 写入,不内置任何密钥)。
 
   文生图:       python3 generate.py --prompt-file p.md --out out.png
   图生图(锁角色): python3 generate.py --prompt-file p.md --reference <锚点图> --out out.png
-  按角色名锁形象: python3 generate.py --prompt-file p.md --cast 小灯 小针 --out out.png
+  按角色名锁形象: python3 generate.py --prompt-file p.md --cast 小煤球 小针 --out out.png
                   (自动附上每个角色的参考图,并在 prompt 末尾注明“参考图 N = 哪个角色”;多 IP 同框用)
 
 prompt 文件 = YAML 头(aspect_ratio 必填) + 正文 prompt。纯标准库,无第三方依赖。
@@ -22,7 +22,10 @@ import argparse, base64, json, os, pathlib, sys, time, urllib.error, urllib.requ
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import castlib  # noqa: E402
 
-CONFIG_PATH = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaodeng-ip-studio" / "config.yaml"
+_CFG_ROOT = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config")))
+CONFIG_PATH = _CFG_ROOT / "xiaomeiqiu-ip-studio" / "config.yaml"
+if not CONFIG_PATH.exists() and (_CFG_ROOT / "xiaodeng-ip-studio" / "config.yaml").exists():
+    CONFIG_PATH = _CFG_ROOT / "xiaodeng-ip-studio" / "config.yaml"  # 兼容改名前的旧配置
 
 TERMINAL_OK = ("completed", "success", "succeeded", "done", "finished")
 TERMINAL_FAIL = ("failed", "error", "cancelled", "canceled", "timeout")
@@ -340,7 +343,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--prompt-file", required=True)
     ap.add_argument("--reference", nargs="*", default=[])
-    ap.add_argument("--cast", nargs="*", default=[], help="按角色名附参考图(最多 3 个),如 --cast 小灯 牛马")
+    ap.add_argument("--cast", nargs="*", default=[], help="按角色名附参考图(最多 3 个),如 --cast 小煤球 牛马")
     ap.add_argument("--out", required=True)
     ap.add_argument("--model", default=None)
     ap.add_argument("--dry-run", action="store_true", help="只校验 prompt 文件与参考图,不调用 API")
