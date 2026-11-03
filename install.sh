@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 小墨 IP Studio · 安装 / 自检
+# 小灯 IP Studio · 安装 / 自检
 set -euo pipefail
 cd "$(dirname "$0")"
 command -v python3 >/dev/null 2>&1 || { echo "✗ 需要 python3"; exit 1; }

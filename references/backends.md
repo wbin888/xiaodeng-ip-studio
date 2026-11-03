@@ -5,7 +5,7 @@
 ## 一次性配置(用脚本时)
 
 ```bash
-python3 scripts/studio.py init     # 填 base_url / model / key,写入 ~/.config/xiaomo-ip-studio/config.yaml(mode 600)
+python3 scripts/studio.py init     # 填 base_url / model / key,写入 ~/.config/xiaodeng-ip-studio/config.yaml(mode 600)
 python3 scripts/studio.py doctor   # 自检
 ```
 
@@ -22,7 +22,7 @@ python3 scripts/studio.py doctor   # 自检
 # 先离线校验(不调 API):比例与方向词联动、参考图是否存在
 python3 scripts/generate.py --prompt-file p.md --out out.png --dry-run
 
-# 文生图(小墨无需参考图)
+# 文生图(小灯无需参考图)
 python3 scripts/generate.py --prompt-file p.md --out assets/slug-illustrations/01-topic.png
 
 # 换角时锁形象
