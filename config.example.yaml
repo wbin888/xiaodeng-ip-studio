@@ -1,5 +1,5 @@
-# xiaofang-ip-studio 生图配置示例
-# 复制为 ~/.config/xiaofang-ip-studio/config.yaml,或运行 `python3 scripts/studio.py init`
+# xiaomo-ip-studio 生图配置示例
+# 复制为 ~/.config/xiaomo-ip-studio/config.yaml,或运行 `python3 scripts/studio.py init`
 base_url: "https://api.openai.com/v1"
 model: "gpt-image-2"
 api_key: "<在这里填你自己的 key>"

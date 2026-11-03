@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""xiaofang-ip-studio CLI:init(填 key) / doctor(自检)。纯标准库。改编自 xiaohu-ip-studio 的 illo.py(MIT)。"""
+"""xiaomo-ip-studio CLI:init(填 key) / doctor(自检)。纯标准库。改编自 xiaohu-ip-studio 的 illo.py(MIT)。"""
 from __future__ import annotations
 import getpass, os, pathlib, sys
 
-CONFIG_DIR = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaofang-ip-studio"
+CONFIG_DIR = pathlib.Path(os.environ.get("XDG_CONFIG_HOME", str(pathlib.Path.home() / ".config"))) / "xiaomo-ip-studio"
 CONFIG_PATH = CONFIG_DIR / "config.yaml"
 SKILL_DIR = pathlib.Path(__file__).resolve().parent.parent
 
 REQUIRED_REFS = [
-    "analysis-playbook.md", "plan-template.md", "metaphor-method.md", "xiaofang-ip.md",
+    "analysis-playbook.md", "plan-template.md", "metaphor-method.md", "xiaomo-ip.md",
     "style-dna.md", "tracks.md", "prompt-template.md", "qa-checklist.md", "cast-swap.md", "backends.md",
 ]
 
 
 def cmd_init():
-    print("=== xiaofang-ip-studio 配置生图 ===")
+    print("=== xiaomo-ip-studio 配置生图 ===")
     print(f"配置将写到: {CONFIG_PATH}\n支持任何 OpenAI 兼容图像端点;key 只存本地、永不上传。\n")
     base = input("图像 API base_url [https://api.openai.com/v1]: ").strip() or "https://api.openai.com/v1"
     model = input("图像模型 model [gpt-image-2]: ").strip() or "gpt-image-2"
@@ -64,7 +64,7 @@ def cmd_doctor():
                 for d in (pack / sub).iterdir() if d.is_dir())
         print(f"[OK] 可选换角包: {pack}({n} 个角色)")
     else:
-        print("[*] 可选换角包: 未安装(默认小方出演,不影响使用;见 references/cast-swap.md)")
+        print("[*] 可选换角包: 未安装(默认小墨出演,不影响使用;见 references/cast-swap.md)")
     print("=== " + ("✅ 就绪" if ok else "❌ 有问题,见上") + " ===")
     sys.exit(0 if ok else 1)
 
